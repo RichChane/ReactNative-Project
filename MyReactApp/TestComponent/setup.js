@@ -32,28 +32,19 @@ export default class setup extends Component {
     }
 
 
-    render(): React.ReactNode {
-        return <View>
-            <StackNavigation />
-        </View>
-
-
-    }
-
-
     /*
     * UI
     * */
 
-    // render () {
-    //     return <View >
-    //         <View style={{height:100}}></View>
-    //         <FlexBoxComponent />
-    //         <WidthHeightComponent />
-    //     </View>
-    //
-    //
-    // }
+    render () {
+        return <View >
+            <View style={{height:100}}></View>
+            {/*<FlexBoxComponent />*/}
+            {/*<WidthHeightComponent />*/}
+        </View>
+
+
+    }
 
 
     /*
