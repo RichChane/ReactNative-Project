@@ -8,6 +8,7 @@ import NaviHomePage from '../page/NaviHomePage';
 import Page1 from '../page/Page1';
 import Page2 from '../page/Page2';
 import Page3 from '../page/Page3';
+import Page4 from '../page/Page4';
 
 
 
@@ -35,29 +36,36 @@ export const AppStackNavigator = createStackNavigator({
 
     },
 
+    Page4:{// 静态
+        screen:Page4,
+        navigationOptions:{
+            title:'This is Page4'
+        }
 
+    },
+
+
+    /**********************************/
     Page3:{
         screen:Page3,
         navigationOptions:(props)=>{
-            const {navigation}=props;
-            const {state,setParams}=navigation;
-            const {params}=state;
+
+            /*
+            * 这三段代码语法知识完全不懂
+            * */
+            // const {navigation}=props;
+            // const {state,setParams}=navigation;
+            // const {params}=state;
 
             return {
-                title:params.title?params.title:'This is Page3',
-                headerRight:(
-                    <Button
-                        title={params.mode==='edit'?'保存':'编辑'}
-                        onPress={()=>
-                            setParams({mode:params.mode==='edit'?'':'edit'})
-                        }
-                    >
-                    </Button>
-                )
+                title:'This is Page3',
+
+                // 右侧按钮 不懂怎么设置
             }
         }
 
     },
+
 
 
 

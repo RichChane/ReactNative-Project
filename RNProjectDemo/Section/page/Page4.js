@@ -8,11 +8,11 @@ import {
 import type {Props} from "react-native/Libraries/Experimental/Incremental";
 
 
-export default class Page3 extends Component<Props> {
+export default class Page4 extends Component<Props> {
 
     render(): React.ReactNode {
         return <View style={styles.container}>
-            <Text > Welcome to Page3 </Text>
+            <Text > Welcome to Page4 </Text>
         </View>
 
     }

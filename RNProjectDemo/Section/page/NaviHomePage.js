@@ -11,6 +11,7 @@ import type {Props} from "react-native/Libraries/Experimental/Incremental";
 
 export default class NaviHomePage extends Component<Props> {
 
+    // 设置title、返回按钮的名称
     static navigationOptions = {
         title:'Home',
         headerBackTitle:'返回主页'
@@ -39,7 +40,7 @@ export default class NaviHomePage extends Component<Props> {
             <Button
                 title={'Go to Page3'}
                 onPress={()=>{
-                    navigation.navigate('Page3',{name:'Devio'})
+                    navigation.navigate('Page3')
                 }}
             />
 
