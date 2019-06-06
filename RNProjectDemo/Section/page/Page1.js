@@ -12,6 +12,9 @@ import navigation from "react-navigation";
 export default class Page1 extends Component<Props> {
 
     render(): React.ReactNode {
+
+        const {navigation} = this.props
+
         return <View style={styles.container}>
             <Text > Welcome to Page1 </Text>
             <Button

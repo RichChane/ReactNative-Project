@@ -11,26 +11,31 @@ import type {Props} from "react-native/Libraries/Experimental/Incremental";
 
 export default class NaviHomePage extends Component<Props> {
 
+    static navigationOptions = {
+        title:'Home',
+        headerBackTitle:'返回主页'
+
+    }
     render(): React.ReactNode {
 
         const {navigation}=this.props;
 
         return <View style={styles.container}>
+
             <Text > Welcome to HomePage </Text>
+
             <Button
                 title={'Go to Page1'}
                 onPress={()=>{
                     navigation.navigate('Page1',{name:'动态的'})
                 }}
             />
-
             <Button
                 title={'Go to Page2'}
                 onPress={()=>{
                     navigation.navigate('Page2')
                 }}
             />
-
             <Button
                 title={'Go to Page3'}
                 onPress={()=>{
