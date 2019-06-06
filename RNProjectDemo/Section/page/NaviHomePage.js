@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import type {Props} from "react-native/Libraries/Experimental/Incremental";
 
+
 export default class NaviHomePage extends Component<Props> {
 
     render(): React.ReactNode {

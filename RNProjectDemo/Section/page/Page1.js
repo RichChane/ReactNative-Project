@@ -6,7 +6,7 @@ import {
     View
 } from 'react-native';
 import type {Props} from "react-native/Libraries/Experimental/Incremental";
-import {NavigationScreenProp as navigation} from "react-navigation";
+import navigation from "react-navigation";
 
 
 export default class Page1 extends Component<Props> {
@@ -17,6 +17,7 @@ export default class Page1 extends Component<Props> {
             <Button
                 title={'Go Back'}
                 onPress={()=>{
+                    //console.log (navigation);
                     navigation.goBack();
                 }}
             />
