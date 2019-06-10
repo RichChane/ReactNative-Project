@@ -3,16 +3,30 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    View
+    View,
+    TextInput
 } from 'react-native';
 import type {Props} from "react-native/Libraries/Experimental/Incremental";
 
 
 export default class Page3 extends Component<Props> {
 
+
+
     render(): React.ReactNode {
         return <View style={styles.container}>
             <Text > Welcome to Page3 </Text>
+
+            <TextInput
+                style={styles.input}
+                onChangeText={text=> {
+
+
+                }}
+
+            />
+
+
         </View>
 
     }
@@ -36,4 +50,14 @@ const styles = StyleSheet.create({
         color: '#333333',
         marginBottom: 5,
     },
+        input:{
+        height:50,
+            width:150,
+        borderWidth:1,
+        marginTop:10,
+        borderColor:'black'
+    }
+
+
+
 });

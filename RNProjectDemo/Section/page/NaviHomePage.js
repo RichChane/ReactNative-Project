@@ -44,6 +44,21 @@ export default class NaviHomePage extends Component<Props> {
                 }}
             />
 
+            <Button
+                title={'Go to Bottom Navigator'}
+                onPress={()=>{
+                    navigation.navigate('Bottom')
+                }}
+            />
+
+            <Button
+                title={'Go to Top Navigator'}
+                onPress={()=>{
+                    navigation.navigate('Top')
+                }}
+            />
+
+
         </View>
 
     }
