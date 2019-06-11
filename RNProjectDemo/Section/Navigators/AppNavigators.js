@@ -3,7 +3,13 @@ import React from 'react';
 import {
     Button,Platform,ScrollView,SafeAreaView
 } from 'react-native';
-import {createStackNavigator,createBottomTabNavigator,createMaterialTopTabNavigator,createDrawerNavigator,DrawerItems} from 'react-navigation';
+import {createStackNavigator,
+    createBottomTabNavigator,
+    createMaterialTopTabNavigator,
+    createDrawerNavigator,
+    DrawerItems,
+    createSwitchNavigator
+} from 'react-navigation';
 
 import NaviHomePage from '../page/NaviHomePage';
 import Page1 from '../page/Page1';
@@ -11,8 +17,11 @@ import Page2 from '../page/Page2';
 import Page3 from '../page/Page3';
 import Page4 from '../page/Page4';
 import Page5 from '../page/Page5';
+import Login from '../page/Login';
 import Iconicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
+
 
 const DrawerNavi = createDrawerNavigator({
     Page4: {
@@ -288,3 +297,25 @@ export const AppStackNavigator = createStackNavigator({
 
 
 })
+
+
+/* SwitchNavigation */
+const AuthStack = createStackNavigator ({
+    Login:{
+        screen:Login
+    },
+
+});
+
+export const AppNavigator = createSwitchNavigator(
+    {
+        Auth: AuthStack,
+
+        App: AppStackNavigator,
+    },
+    {
+        initialRouteName:'Auth',
+
+    }
+
+);

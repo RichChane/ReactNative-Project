@@ -9,17 +9,21 @@ import {
 import type {Props} from "react-native/Libraries/Experimental/Incremental";
 
 
-export default class Page4 extends Component<Props> {
+export default class Login extends Component<Props> {
 
     render(): React.ReactNode {
         const {navigation} = this.props;
 
         return <View style={styles.container}>
-            <Text > Welcome to Page4 </Text>
+            <Text > Welcome to Login </Text>
 
-            <Button title = {'Open Drawer'} onPress = {() => navigation.openDrawer} />
-            <Button title = {'Close Drawer'} onPress = {() => navigation.closeDrawer} />
-            <Button title = {'Toggle Drawer'} onPress = {() => navigation.toggleDrawer} />
+            <Button
+                title = {'Login'}
+                onPress = {()=>{
+                    navigation.navigate('App')
+                }}
+
+            />
 
         </View>
 

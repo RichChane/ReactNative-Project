@@ -7,8 +7,8 @@ import App from './App';
 import {name as appName} from './app.json';
 
 import {createAppContainer} from 'react-navigation';
-import {AppStackNavigator} from "./Section/Navigators/AppNavigators";
+import {AppNavigator} from "./Section/Navigators/AppNavigators";
 
-const AppStackNavigatorContainer = createAppContainer(AppStackNavigator)
+const AppStackNavigatorContainer = createAppContainer(AppNavigator)
 
 AppRegistry.registerComponent(appName, () => AppStackNavigatorContainer);
