@@ -3,7 +3,8 @@ import React from 'react';
 import {
     Button,Platform,ScrollView,SafeAreaView
 } from 'react-native';
-import {createStackNavigator,
+import {
+    createStackNavigator,
     createBottomTabNavigator,
     createMaterialTopTabNavigator,
     createDrawerNavigator,
@@ -138,7 +139,7 @@ const AppTopNavigator = createMaterialTopTabNavigator({
 
 })
 
-const AppBottomNavigator = createBottomTabNavigator({
+export const AppBottomNavigator = createBottomTabNavigator({
     Page1: {
         screen: Page1,
         navigationOptions: {
@@ -220,55 +221,55 @@ const AppBottomNavigator = createBottomTabNavigator({
 export const AppStackNavigator = createStackNavigator({
 
     NavigationHomePage:{
-        screen:NaviHomePage
+        screen:AppBottomNavigator
     },
 
-    Page1:{// 动态配置 navigationOptions
-        screen:Page1,
-        navigationOptions:({navigation})=>({
-            title:`${navigation.state.params.name}页面名`
-
-        })
-    },
-
-
-    Page2:{// 静态
-        screen:Page2,
-        navigationOptions:{
-            title:'This is Page2'
-        }
-
-    },
-
-    Page4:{// 静态
-        screen:Page4,
-        navigationOptions:{
-            title:'This is Page4'
-        }
-
-    },
+    // Page1:{// 动态配置 navigationOptions
+    //     screen:Page1,
+    //     navigationOptions:({navigation})=>({
+    //         title:`${navigation.state.params.name}页面名`
+    //
+    //     })
+    // },
+    //
+    //
+    // Page2:{// 静态
+    //     screen:Page2,
+    //     navigationOptions:{
+    //         title:'This is Page2'
+    //     }
+    //
+    // },
+    //
+    // Page4:{// 静态
+    //     screen:Page4,
+    //     navigationOptions:{
+    //         title:'This is Page4'
+    //     }
+    //
+    // },
 
 
     /**********************************/
-    Page3:{
-        screen:Page3,
-        navigationOptions:(props)=>{
-
-            /*
-            * 这三段代码语法知识完全不懂 - 并且还会莫名报错
-            * */
-            // const {navigation}=props;
-            // const {state,setParams}=navigation;
-            // const {params}=state;
-
-            return {
-                title:'This is Page3',
-
-                // 右侧按钮 不懂怎么设置
-            }
-        }
-
-    },
+    // Page3:{
+    //     screen:Page3,
+    //     navigationOptions:(props)=>{
+    //
+    //         /*
+    //         * 这三段代码语法知识完全不懂 - 并且还会莫名报错
+    //         * */
+    //         // const {navigation}=props;
+    //         // const {state,setParams}=navigation;
+    //         // const {params}=state;
+    //
+    //         return {
+    //             title:'This is Page3',
+    //
+    //             // 右侧按钮 不懂怎么设置
+    //         }
+    //     }
+    //
+    // },
 
     Bottom : {
 
